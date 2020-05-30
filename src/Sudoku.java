@@ -103,7 +103,7 @@ class Sudoku {
             }
             
             for (int col=0; col<9 ; col++) {
-                System.out.print((col%3==0 ? "|" : " ")+data[row][col]);
+                System.out.print((col%3==0 ? "|" : " ")+(data[row][col]==0 ? " " : data[row][col]));
             }
             
             System.out.println("|");
