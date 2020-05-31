@@ -60,7 +60,7 @@ class Sudoku {
         
         // check rows
         for (int y=0; y<9 ; y++) {
-            for (int x=0; x<9 ; x++) {
+            for (int x=0; x<8 ; x++) {
                 for (int x2=x+1 ; x2<9 ; x2++) {
                     if (data[y][x]==data[y][x2]) return false;
                 }
@@ -69,7 +69,7 @@ class Sudoku {
         
         // check columns
         for (int x=0; x<9 ; x++) {
-            for (int y=0; y<9 ; y++) {
+            for (int y=0; y<8 ; y++) {
                 for (int y2=y+1 ; y2<9 ; y2++) {
                     if (data[y][x]==data[y2][x]) return false;
                 }
@@ -79,7 +79,7 @@ class Sudoku {
         // check groups
         for (int x=0; x<3 ; x++) {
             for (int y=0; y<3 ; y++) {
-                for (int i=0 ; i<9 ; i++) {
+                for (int i=0 ; i<8 ; i++) {
                     int ix = i%3;
                     int iy = i/3;
                     for (int i2=i+1 ; i2<9 ; i2++) {
