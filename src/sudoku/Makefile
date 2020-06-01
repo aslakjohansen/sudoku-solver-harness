@@ -1,5 +1,5 @@
 TARGETS = \
-	Sudoku.class \
+	Puzzle.class \
 
 all: ${TARGETS}
 
@@ -12,10 +12,10 @@ mrproper: clean
 	rm    *~
 
 
-Sudoku.class: Sudoku.java
-	javac Sudoku.java
-	javac -d . Sudoku.java
+Puzzle.class: Puzzle.java
+	javac Puzzle.java
+	javac -d . Puzzle.java
 
-Sudoku: Sudoku.class
-	java Sudoku
+Puzzle: Puzzle.class
+	java sudoku/Puzzle
 

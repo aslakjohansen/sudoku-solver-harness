@@ -2,11 +2,11 @@ package sudoku;
 
 import java.util.*;
 
-public class Sudoku {
+public class Puzzle {
     int[][] data;
     Stack<int[][]> stack;
     
-    public Sudoku (String definition) throws Exception {
+    public Puzzle (String definition) throws Exception {
         // guard definition length
         if (definition.length() != 9*9) throw new Exception("Invalid definition length");
         
@@ -124,7 +124,7 @@ public class Sudoku {
         };
         
         for (String puzzledef : puzzledefs) {
-            Sudoku s = new Sudoku(puzzledef);
+            Puzzle s = new Puzzle(puzzledef);
             s.print();
             System.out.println(s.check());
             System.out.println("");
