@@ -1,10 +1,12 @@
+package sudoku;
+
 import java.util.*;
 
-class Sudoku {
+public class Sudoku {
     int[][] data;
     Stack<int[][]> stack;
     
-    Sudoku (String definition) throws Exception {
+    public Sudoku (String definition) throws Exception {
         // guard definition length
         if (definition.length() != 9*9) throw new Exception("Invalid definition length");
         
@@ -22,11 +24,11 @@ class Sudoku {
     }
     
     public int get (int x, int y) {
-        return data[x][y];
+        return data[y][x];
     }
     
     public void set (int x, int y, int value) {
-        data[x][y] = value;
+        data[y][x] = value;
     }
     
     public void push () {
@@ -99,7 +101,7 @@ class Sudoku {
     public void print () {
         for (int row=0; row<9 ; row++) {
             if (row%3==0) {
-                System.out.println("+-----+-----+-----+");
+                System.out.println("A+-----+-----+-----+");
             }
             
             for (int col=0; col<9 ; col++) {

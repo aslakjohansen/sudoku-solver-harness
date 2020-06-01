@@ -14,6 +14,7 @@ mrproper: clean
 
 Sudoku.class: Sudoku.java
 	javac Sudoku.java
+	javac -d . Sudoku.java
 
 Sudoku: Sudoku.class
 	java Sudoku
