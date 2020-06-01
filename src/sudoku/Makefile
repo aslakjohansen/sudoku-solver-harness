@@ -10,10 +10,11 @@ clean:
 mrproper: clean
 	touch d~
 	rm    *~
+	touch sudoku
+	rm -R sudoku
 
 
 Puzzle.class: Puzzle.java
-	javac Puzzle.java
 	javac -d . Puzzle.java
 
 Puzzle: Puzzle.class
